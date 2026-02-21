@@ -1,0 +1,397 @@
+Okay.
+This? This is actually hackathon-finalist energy.
+
+You’re not just making a branching wizard game.
+You’re making a **playable collapse of language and reality**.
+
+I’ll write this like a proper Game Design Document — clean, structured, presentable to judges, and dev-friendly.
+
+---
+
+# 🪞 ECHOES OF THE UNWRITTEN WIZARDING WORLD
+
+### Game Design Document (Hackathon Version)
+
+---
+
+## 1. High Concept
+
+**Genre:** Narrative-driven branching adventure
+**Perspective:** Third-person / semi-isometric (depending on assets)
+**Theme:** Into the Unknown
+**Core Pillar:** Reality collapses. Language disappears. Meaning must be rediscovered.
+
+> What happens when the world refuses to stay written?
+
+---
+
+## 2. Narrative Overview
+
+### 🌌 The Fracture
+
+A magical disturbance destabilizes reality.
+
+* Spells mutate.
+* Architecture glitches.
+* Portraits whisper in unfamiliar symbols.
+* Forgotten magic leaks back into existence.
+
+After an opening narrative segment, **The Fracture hits** — and written language collapses.
+
+From that point forward:
+
+* Dialogue is replaced by **custom-designed symbols**
+* UI elements distort
+* Players must infer meaning visually
+
+---
+
+## 3. Core Characters
+
+### 🧙 Kael Thornwood
+
+* Ability: Sees spell residue trails
+* Narrative Arc: Hears echoes from erased timelines
+* Hidden Truth: May not belong to this version of reality
+
+Gameplay Tie-In:
+
+* Reveals hidden paths
+* Highlights interactable objects
+
+---
+
+### 🌑 Mira Holloway
+
+* Ability: Can rewrite minor spell outcomes
+* Conflict: Her magic becomes unstable after The Fracture
+
+Gameplay Tie-In:
+
+* Random spell modifier mechanic
+* Spell crafting mutations
+
+---
+
+### 🧠 Professor Vaelor Grimm
+
+* Teaches Forbidden Theories
+* Aware of The Fracture
+* Possibly responsible
+
+Narrative Function:
+
+* Moral ambiguity anchor
+* Late-game revelation catalyst
+
+---
+
+## 4. Core Gameplay Loop
+
+1. Explore distorted level
+2. Solve environmental puzzles
+3. Discover hidden artifact piece
+4. Decide:
+
+   * Take power (lose something)
+   * Preserve stability (lose advantage)
+5. Collect portal fragment
+6. Progress to next corrupted zone
+
+Goal: Gather fragments to construct a portal back to reality.
+
+---
+
+## 5. Language Collapse Mechanic (Primary Innovation)
+
+After Level 1 intro:
+
+* All readable text becomes symbolic glyphs
+* Dialogue is expressed through:
+
+  * Body language
+  * Environmental cues
+  * Iconography
+  * Color coding
+  * Symbol repetition patterns
+
+Design Rules:
+
+* Symbols evolve over time
+* Frequently repeated glyphs imply importance
+* Colors convey tone (red = danger, blue = stability, etc.)
+
+This forces players to **feel lost**.
+
+That’s the point.
+
+---
+
+## 6. Level Structure
+
+---
+
+### 🏰 Level 1 — The Whispering Hall
+
+![Image](https://cdn.vectorstock.com/i/1000v/97/31/portal-door-in-abandoned-magic-castle-fantasy-game-vector-49089731.jpg)
+
+![Image](https://artfiles.alphacoders.com/888/thumb-1920-88876.jpg)
+
+![Image](https://i.pinimg.com/736x/94/63/8a/94638af52a0a01feccf53c6aab57eeb6.jpg)
+
+![Image](https://elements-resized.envatousercontent.com/elements-video-cover-images/3828074e-9ba7-4333-afc7-0187f6d87994/video_preview/video_preview_0000.jpg?cf_fit=crop\&format=jpeg\&h=630\&q=85\&s=aa2c68440373a43c130106afa4f16ab360208fd6c75fb9bd6cc48c00cd0a247c\&w=1200)
+
+* Moving staircases glitch
+* Spell residue trails become visible
+* Puzzle: Follow invisible magical trails
+* Mini-game: Mouse-based spell tracing
+
+Artifact Piece: Portal Core Frame Fragment
+
+Fracture triggers at end of level.
+Language collapses.
+
+---
+
+### 🌲 Level 2 — The Fractured Forest
+
+![Image](https://mediaproxy.tvtropes.org/width/1200/https%3A//static.tvtropes.org/pmwiki/pub/images/avatar_full_30129_4.jpg)
+
+![Image](https://cdn.conceptartempire.com/images/10/7709/32-khardull-creature-concept-painting.jpg)
+
+![Image](https://i.pinimg.com/736x/a5/27/e3/a527e3e3d93f1591d81a49d54d4d707a.jpg)
+
+![Image](https://r2.starryai.com/results/1041897835/57b5488e-29ab-406f-b5b8-c870bdeb869a.webp)
+
+* Creatures flicker between forms
+* Trees distort geometrically
+* Environmental instability increases
+
+Major Choice:
+
+* Save corrupted creature (Stability +)
+* Study it for power (Chaos +)
+
+Reward:
+
+* Creature essence OR power mutation
+
+Artifact Piece: Portal Energy Conduit
+
+---
+
+### 🪞 Level 3 — Mirror of Possibilities
+
+![Image](https://st4.depositphotos.com/1781787/31564/i/450/depositphotos_315641418-stock-photo-dark-room-magical-antique-mirror.jpg)
+
+![Image](https://images.squarespace-cdn.com/content/v1/64e9c897cc6fb4313decf8d6/40d7af94-ed28-4ef9-9fa2-a2496135ed8f/medieval_fantasy_character_design.jpg)
+
+![Image](https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/1e10a732085359.566eba75cc686.jpg)
+
+![Image](https://i.pinimg.com/236x/71/6e/2e/716e2e1ca4d811c70dcfc5c5b0a1ca03.jpg)
+
+* Player sees alternate versions of themselves
+* Reflections move independently
+* Symbol language becomes denser
+
+Major Branch Lock:
+
+Choose one:
+
+* Power Path
+* Knowledge Path
+* Chaos Path
+
+Artifact Piece: Reality Anchor
+
+---
+
+## 7. Portal System
+
+Portal requires:
+
+* Core Frame
+* Energy Conduit
+* Reality Anchor
+
+Each piece changes appearance based on player morality meter.
+
+Final Portal Visual Changes:
+
+* Stable: Blue-white structured light
+* Merged: Shifting multicolor vortex
+* Anomaly: Dark pulsing void
+
+---
+
+## 8. Morality System
+
+Meter: **Stability vs Chaos**
+
+Actions Affect Meter:
+
+* Choosing knowledge over power → Stability
+* Choosing mutation → Chaos
+* Sacrificing object for power → Chaos spike
+
+Important:
+Player loses **objects**, not people.
+
+Examples:
+
+* Lose spellbook pages
+* Lose map clarity
+* Lose ability to see certain trails
+* Lose UI hints permanently
+
+Loss = mechanical cost.
+
+This hits harder than emotional drama.
+
+---
+
+## 9. Endings
+
+### Ending 1 — Restore Reality
+
+* Timeline stabilizes
+* Language returns
+* Magic becomes predictable
+* Player sacrifices gained mutations
+
+### Ending 2 — Merge Realities
+
+* Hybrid world
+* Magic remains unstable but richer
+* Glyph language partially persists
+
+### Ending 3 — Become the Anomaly
+
+* Player becomes new fracture source
+* Portal collapses
+* Symbol-only final scene
+* No translation provided
+
+Judges will love this one.
+
+---
+
+## 10. Core Mechanics
+
+* Branching dialogue tree
+* State machine story progression
+* JSON-based story scripting
+* Spell tracing mini-game
+* Randomized spell mutation system
+* Stability vs Chaos meter
+* Collectible lore fragments
+* Portal construction system
+
+---
+
+## 11. Visual Direction
+
+* Dark palette
+* Heavy contrast lighting
+* Particle distortion effects
+* Glitch overlays during fracture
+* Animated UI corruption
+
+Visual Inspiration:
+
+* Control
+* Hollow Knight
+* Annihilation
+
+---
+
+## 12. Audio Direction
+
+* Whispered reversed audio layers
+* Sub-bass distortion during fracture
+* Audio warping near anomalies
+* Silence used intentionally
+
+Web Audio API:
+
+* Pitch shifting
+* Reverb zones
+* Dynamic ambient layering
+
+---
+
+## 13. Tech Stack (Hackathon Realistic)
+
+Frontend:
+
+* React
+* Tailwind
+
+Animation:
+
+* Framer Motion
+* Three.js (optional for portal)
+
+Game State:
+
+* XState or custom state machine
+* JSON-driven branching logic
+
+Audio:
+
+* Web Audio API
+
+Assets:
+
+* Sketchfab (optimized + dark shader pass)
+
+---
+
+## 14. Demo Strategy (Critical)
+
+1. Start with clean academy intro.
+2. Show character interaction.
+3. Fracture hits.
+4. UI corrupts.
+5. Language disappears.
+6. Show symbol-based dialogue.
+7. Complete spell mini-game.
+8. Show portal fragment.
+9. Rapidly preview 3 endings.
+
+Close with:
+
+> “When language disappears, meaning must be earned.”
+
+Mic drop.
+
+---
+
+## 15. Scope Control (Very Important)
+
+Hackathon Version Includes:
+
+* 2 playable levels
+* 1 locked branch path
+* 2 endings implemented
+* Portal assembly animation
+* Partial symbolic system
+
+DO NOT:
+
+* Overbuild the glyph language
+* Overdesign branching
+* Build a full 3D engine
+
+Keep it tight.
+
+---
+
+Now I’ll ask one important dev question:
+
+Are you making this:
+
+* 2.5D (easier)
+* Fully 3D (riskier but flashier)
+
+Because that decision determines your suffering level.

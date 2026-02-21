@@ -1,0 +1,404 @@
+Project Name: Echoes of the Unwritten
+Document Version: 1.0
+Type: Interactive Narrative Web Game
+
+1. Executive Summary
+
+Echoes of the Unwritten is a browser-based, choice-driven fantasy narrative game inspired by magical academy worlds. The game centers around fractured reality, unstable magic, and player-driven branching storylines.
+
+The product combines cinematic storytelling, interactive spell mini-games, and a moral alignment system to deliver a replayable experience with multiple endings.
+
+2. Product Vision
+
+To create an immersive, visually compelling interactive fantasy experience where:
+
+Player decisions meaningfully alter the world.
+
+Magic behaves unpredictably.
+
+Story branches dynamically.
+
+Multiple endings provide replayability.
+
+The experience feels like a playable cinematic narrative.
+
+3. Goals & Objectives
+Primary Goals
+
+Deliver a complete branching story experience.
+
+Implement interactive spellcasting gameplay.
+
+Provide at least three distinct endings.
+
+Showcase strong visual immersion and transitions.
+
+Success Criteria
+
+Users can complete a full story run in 10–15 minutes.
+
+Player choices visibly impact narrative progression.
+
+The system supports replay with different outcomes.
+
+Demo presentation clearly shows branching and interaction.
+
+4. Target Audience
+
+Hackathon judges
+
+Fantasy narrative enthusiasts
+
+Casual web-based gamers
+
+Interactive storytelling audiences
+
+5. Product Scope
+In Scope
+
+Branching story engine
+
+Moral alignment system
+
+Spellcasting mini-game
+
+Character trust mechanics
+
+Multiple endings
+
+Immersive UI and animation
+
+Save and resume functionality
+
+Out of Scope
+
+Multiplayer functionality
+
+Fully 3D environment
+
+Voice acting
+
+Open-world exploration
+
+Infinite procedural storytelling
+
+6. Functional Requirements
+6.1 Narrative Engine
+Description
+
+A JSON-driven branching narrative system.
+
+Requirements
+
+Story defined via structured JSON.
+
+Scene-to-scene navigation.
+
+Dialogue rendering with typewriter effect.
+
+Player choice buttons.
+
+Conditional scene branching.
+
+Flag-based event tracking.
+
+Smooth animated scene transitions.
+
+6.2 Game State Management
+Description
+
+Centralized state system tracking progression.
+
+Data Tracked
+
+Current chapter
+
+Current scene
+
+Alignment scores (Stability / Chaos / Knowledge)
+
+Character trust levels
+
+Unlocked spells
+
+Special event flags
+
+Requirements
+
+State updates in real time.
+
+Persisted via local storage.
+
+Resume functionality.
+
+6.3 Moral Alignment System
+Description
+
+Decision-based scoring mechanism affecting gameplay and narrative.
+
+Metrics
+
+Stability
+
+Chaos
+
+Knowledge
+
+Requirements
+
+Choices update scores.
+
+Hidden threshold logic.
+
+Alignment impacts:
+
+Dialogue variations
+
+Spell outcomes
+
+Ending eligibility
+
+6.4 Spellcasting Mini-Game
+Description
+
+Interactive tracing mechanic representing spellcasting.
+
+Requirements
+
+Mouse-based tracing interaction.
+
+Accuracy scoring.
+
+Success/failure logic.
+
+Visual feedback animation.
+
+Score affects alignment and story flags.
+
+6.5 Character System
+Description
+
+Dynamic character interaction model.
+
+Requirements
+
+Trust score per major character.
+
+Dialogue variations based on trust.
+
+Unlockable scenes at trust thresholds.
+
+Trust influences ending variations.
+
+6.6 Level & Chapter Structure
+Required Chapters
+
+Introduction – The Fracture Begins
+
+Mid-Level Branch – Major Alignment Shift
+
+Final Act – Confrontation and Outcome
+
+Each chapter must:
+
+Contain interactive choices.
+
+Include at least one conditional branch.
+
+Progress narrative tension.
+
+6.7 Endings
+Minimum Required
+
+Restorer Ending
+
+Weaver Ending
+
+Anomaly Ending
+
+Requirements
+
+Endings unlocked via alignment + final decision.
+
+Unique epilogue text for each ending.
+
+Visual differentiation between endings.
+
+6.8 UI/UX Requirements
+Main Menu
+
+Start Game
+
+Continue
+
+Settings
+
+In-Game HUD
+
+Alignment meters
+
+Chapter indicator
+
+Spell inventory (if unlocked)
+
+Immersion Features
+
+Dark fantasy theme
+
+Typewriter dialogue animation
+
+Particle effects for spells
+
+Glitch transitions for unstable scenes
+
+Basic sound effects toggle
+
+6.9 Save & Progression
+Requirements
+
+Auto-save after each scene.
+
+Resume from last state.
+
+New Game resets state.
+
+Replay allowed with different outcomes.
+
+7. Non-Functional Requirements
+Performance
+
+Page load under 3 seconds.
+
+Smooth animations (target 60fps).
+
+Minimal lag during transitions.
+
+Accessibility
+
+Adjustable text size.
+
+Sound on/off toggle.
+
+Keyboard support for choices.
+
+Compatibility
+
+Desktop-first experience.
+
+Responsive layout for mobile (basic).
+
+8. Technical Architecture
+Frontend
+
+React
+
+Tailwind CSS
+
+Framer Motion
+
+Optional Three.js for effects
+
+State Management
+
+Context API or Zustand
+
+Storage
+
+Local storage persistence
+
+Story Engine
+
+JSON parser
+
+Conditional branching logic
+
+9. Feature Prioritization (MoSCoW)
+Must Have
+
+Branching narrative engine
+
+Core game state system
+
+Alignment scoring
+
+One spellcasting mini-game
+
+Three endings
+
+Save/resume
+
+Animated transitions
+
+Should Have
+
+Character trust system
+
+Spell mutation logic
+
+Particle effects
+
+Lore archive
+
+Replay system
+
+Could Have
+
+Procedural spell symbols
+
+Dynamic music system
+
+Timeline visualization
+
+Secret fourth ending
+
+Won’t Have
+
+Multiplayer
+
+Open-world exploration
+
+Full 3D navigation
+
+Full voice acting
+
+10. User Flow Summary
+
+User opens game.
+
+Starts new game.
+
+Proceeds through introduction.
+
+Makes branching decisions.
+
+Plays spell mini-game.
+
+Alignment shifts dynamically.
+
+Reaches final confrontation.
+
+Ending determined.
+
+Epilogue displayed.
+
+Option to replay.
+
+11. Risks & Mitigation
+Risk	Mitigation
+Scope creep	Strict Must-Have focus
+Branching complexity	JSON modular structure
+State bugs	Centralized state management
+Time limitation	Build core engine first
+12. Launch Readiness Criteria
+
+The product is demo-ready when:
+
+A full playthrough is possible.
+
+Alignment visibly changes story.
+
+Spell mini-game functions correctly.
+
+At least three endings are accessible.
+
+UI transitions are polished.
