@@ -1,6 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Float, MeshDistortMaterial, MeshWobbleMaterial, Box, Cylinder, Text, Stars, Sparkles, Torus } from '@react-three/drei';
+import { Float, MeshDistortMaterial, MeshWobbleMaterial, Box, Cylinder, Text, Stars, Sparkles, Torus, Sphere } from '@react-three/drei';
 import * as THREE from 'three';
 
 const Pillar = ({ position, height = 8, color = "#d4af37" }) => (
@@ -110,25 +110,88 @@ const FrozenHall = ({ onNextStage }) => (
     </group>
 );
 
-// --- LEVEL 2: SHIFTING FOREST ---
-const ShiftingForest = ({ onNextStage }) => (
+// --- LEVEL 2: SHIFTING FOREST (SPIRIT TRAIL) ---
+const ShiftingForest = ({ onNextStage }) => {
+    return (
+        <group>
+            <mesh rotation={[-Math.PI / 2, 0, 0]} name="floor">
+                <planeGeometry args={[500, 500]} />
+                <meshStandardMaterial color="#020502" roughness={0.8} metalness={0.2} />
+            </mesh>
+
+            {/* Twisted Trees */}
+            {[...Array(60)].map((_, i) => {
+                const angle = (i / 60) * Math.PI * 2;
+                const dist = 30 + Math.random() * 100;
+                return (
+                    <group key={i} position={[Math.cos(angle) * dist, 0, Math.sin(angle) * dist - 80]}>
+                        <Cylinder args={[0.2, 1.5, 25, 6]} position={[0, 12.5, 0]}>
+                            <MeshWobbleMaterial color="#0a120a" speed={0.5} factor={0.8} />
+                        </Cylinder>
+                        {/* Bio-luminescent flora */}
+                        <pointLight position={[0, 2, 0]} intensity={0.5} color="#00ff88" distance={10} />
+                    </group>
+                );
+            })}
+
+            {/* Glowing Spirit Trail - GUIDES PLAYER */}
+            {[...Array(12)].map((_, i) => (
+                <group key={`trail-${i}`} position={[Math.sin(i * 0.8) * 8, 1, -i * 15]}>
+                    <Sphere args={[0.3, 16, 16]}>
+                        <meshBasicMaterial color="#00ffaa" transparent opacity={0.6} />
+                    </Sphere>
+                    <pointLight intensity={2} color="#00ffaa" distance={12} />
+                    <Sparkles count={10} scale={2} size={2} color="#00ffaa" />
+                </group>
+            ))}
+
+            {/* Root Traps (Obstacles) */}
+            {[...Array(8)].map((_, i) => (
+                <group key={`root-${i}`} position={[Math.random() * 4 - 2, 0, -i * 20 - 10]}>
+                    <Cylinder args={[4, 4, 0.8, 8]} rotation={[0, 0, Math.PI / 2]} position={[0, 0.4, 0]}>
+                        <meshStandardMaterial color="#1a0a05" />
+                    </Cylinder>
+                    <Text position={[0, 2, 0]} fontSize={0.2} color="red" opacity={0.3}>ROOT TRAP - JUMP!</Text>
+                </group>
+            ))}
+
+            <Checkpoint
+                position={[0, 0, -180]}
+                color="#00ffaa"
+                label="THE SPIRIT RIFT"
+                subLabel="Confront the corrupted energy"
+                onReach={() => onNextStage(3)}
+            />
+        </group>
+    );
+};
+
+// --- LEVEL 3: MIRROR CHAMBER (THE ECHO) ---
+const MirrorChamber = ({ onNextStage }) => (
     <group>
+        {/* Reflective Dark Floor */}
         <mesh rotation={[-Math.PI / 2, 0, 0]} name="floor">
-            <planeGeometry args={[400, 400]} />
-            <meshStandardMaterial color="#050805" />
+            <planeGeometry args={[100, 100]} />
+            <meshStandardMaterial color="#050505" roughness={0.01} metalness={0.9} />
         </mesh>
-        {[...Array(50)].map((_, i) => (
-            <group key={i} position={[Math.sin(i) * 50, 0, Math.cos(i) * 80 - 50]}>
-                <Cylinder args={[0.1, 1.2, 20]} position={[0, 10, 0]}>
-                    <MeshWobbleMaterial color="#0a100a" speed={1} factor={0.6} />
-                </Cylinder>
-            </group>
+
+        <gridHelper args={[100, 20, "#333", "#111"]} position={[0, 0.01, 0]} />
+
+        {/* Floating Mirror Shards */}
+        {[...Array(20)].map((_, i) => (
+            <Float key={i} speed={3} rotationIntensity={2} position={[(Math.random() - 0.5) * 40, 5 + Math.random() * 10, (Math.random() - 0.5) * 40]}>
+                <Box args={[0.1, 2, 1]}>
+                    <meshStandardMaterial color="#fff" metalness={1} roughness={0} />
+                </Box>
+            </Float>
         ))}
-        {/* Glowing Spirit Trail */}
-        {[...Array(10)].map((_, i) => (
-            <pointLight key={i} position={[Math.sin(i * 0.5) * 10, 2, -i * 15]} intensity={2} color="#00ffaa" distance={15} />
-        ))}
-        <Checkpoint position={[0, 0, -120]} color="#00ffaa" label="CHAMBER OF ECHOES" onReach={() => onNextStage(3)} />
+
+        {/* Central Pedestal */}
+        <Box args={[4, 1, 4]} position={[0, 0.5, -20]} name="platform">
+            <meshStandardMaterial color="#111" />
+        </Box>
+
+        <Checkpoint position={[0, 1, -20]} color="#ffffff" label="CONFRONT THE ECHO" onReach={() => onNextStage(0)} />
     </group>
 );
 
@@ -138,9 +201,18 @@ const FracturePoint = ({ stage, onNextStage, fractureLevel }) => {
             {stage === 0 && <CorridorHub onNextStage={onNextStage} fractureLevel={fractureLevel} />}
             {stage === 1 && <FrozenHall onNextStage={onNextStage} />}
             {stage === 2 && <ShiftingForest onNextStage={onNextStage} />}
+            {stage === 3 && <MirrorChamber onNextStage={onNextStage} />}
 
             {/* World background visuals based on stage */}
-            <Stars radius={250} depth={60} count={stage === 1 ? 15000 : 5000} factor={4} saturation={1} fade speed={1} />
+            <Stars
+                radius={250}
+                depth={60}
+                count={stage === 2 ? 20000 : 5000}
+                factor={stage === 2 ? 8 : 4}
+                saturation={stage === 2 ? 0 : 1}
+                fade
+                speed={1}
+            />
         </group>
     );
 };
